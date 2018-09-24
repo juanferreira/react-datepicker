@@ -306,7 +306,7 @@ export default class DatePicker extends React.Component {
   };
 
   handleCalendarClickOutside = event => {
-    if (!this.props.inline) {
+    if (!this.props.inline && this.props.closeOnClickOutside) {
       this.setOpen(false);
     }
     this.props.onClickOutside(event);
